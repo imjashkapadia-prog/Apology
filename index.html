@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm Sorry, My Raag 🥺</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff8fa);
+      font-family: 'Poppins', sans-serif;
+      color: #3e2723;
+      text-align: center;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100vh;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #b8336a;
+      margin-top: 40px;
+      font-size: 2.5em;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* 🖼️ Gallery container for 3 side-by-side images */
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px auto;
+      max-width: 95%;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .image-gallery img {
+      width: 30%;
+      max-width: 160px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    p {
+      width: 85%;
+      max-width: 500px;
+      margin: 15px auto;
+      font-size: 1.05em;
+      line-height: 1.7;
+      color: #4a2c2a;
+      opacity: 0;
+      animation: fadeText 1s forwards;
+    }
+
+    p:nth-of-type(1) { animation-delay: 2s; }
+    p:nth-of-type(2) { animation-delay: 4s; }
+    p:nth-of-type(3) { animation-delay: 6s; }
+    .extra-message { animation-delay: 8s; }
+
+    @keyframes fadeText {
+      to { opacity: 1; }
+    }
+
+    button {
+      background-color: #ff80a8;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 1em;
+      border-radius: 30px;
+      margin: 40px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 4px 10px rgba(255, 128, 168, 0.4);
+    }
+
+    button:hover {
+      background-color: #ff6699;
+      transform: scale(1.05);
+    }
+
+    .floating-emoji {
+      position: fixed;
+      font-size: 24px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0.9; }
+      100% { transform: translateY(-110vh) scale(1.6); opacity: 0; }
+    }
+
+    .love-text {
+      display: none;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.2em;
+      color: #b8336a;
+      text-shadow: 0 0 20px #ffc1d9;
+      margin-bottom: 40px;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffb3c6; }
+      to { text-shadow: 0 0 25px #ff6699; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .glow-line {
+      display: inline-block;
+      color: #b8336a;
+      animation: softGlow 2s ease-in-out infinite alternate;
+      text-shadow: 0 0 12px #ffb3c6, 0 0 24px #ff6699;
+    }
+
+    @keyframes softGlow {
+      from {
+        text-shadow: 0 0 8px #ffb3c6, 0 0 16px #ff80a8;
+      }
+      to {
+        text-shadow: 0 0 16px #ff99bb, 0 0 30px #ff4d94;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>I'm So Sorry, My Raag 🥺</h1>
+
+  <!-- 💞 Image gallery (3 images side by side) -->
+  <div class="image-gallery">
+    <img src="IMG_1.jpg" alt="Memory 1">
+    <img src="IMG_2.jpg" alt="Memory 2">
+    <img src="IMG_3.jpg" alt="Memory 3">
+  </div>
+
+  <p>
+    Raag, my baby… my sweetie…  
+    I’m really very sorry for whatever happened. 🥺  
+    I wish I could take it all back, but I can only promise that  
+    I’ll never let you feel that hurt again.
+  </p>
+
+  <p>
+    Please don’t push me away, my love. 😔  
+    I want to be by your side through every storm and silence,  
+    to hold you when you’re sad and remind you that you’ll never be alone. 🥺  
+  </p>
+
+  <p>
+    You mean everything to me, Raag.  
+    You’re my peace, my strength, my heart. 💔  
+    I’m truly, deeply sorry… please forgive me. 😔  
+  </p>
+
+  <p class="extra-message">
+    Raag, I really love you a lot… I miss you so much every second. 🥺  
+    Your silence hurts more than anything, baby — please don’t distance me with it.  
+    I just want to be with you now, hold you close, and never let you go. 😞  
+    <span class="glow-line">I love you so much, yaar… please talk to me, my heart can’t take this distance anymore. 💔🥺</span>
+  </p>
+
+  <button onclick="releaseEmojis()">Forgive me, Raag 🥺💔</button>
+
+  <div class="love-text" id="loveText">
+    I love you, and I’m sorry, hugging you tightly 🥺❤️
+  </div>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="Kuch Is Tarah-(Mr-Jat.in).mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    document.body.addEventListener('click', () => {
+      if (music.paused) music.play();
+    });
+
+    function createFloatingEmojis() {
+      const emoji = document.createElement('div');
+      emoji.className = 'floating-emoji';
+      emoji.textContent = Math.random() > 0.5 ? '🥺' : '😔';
+      emoji.style.left = Math.random() * 100 + 'vw';
+      emoji.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(emoji);
+      setTimeout(() => emoji.remove(), 8000);
+    }
+    setInterval(createFloatingEmojis, 900);
+
+    function releaseEmojis() {
+      for (let i = 0; i < 25; i++) {
+        const emoji = document.createElement('div');
+        emoji.className = 'floating-emoji';
+        emoji.textContent = Math.random() > 0.5 ? '🥺' : '😔';
+        emoji.style.left = Math.random() * 100 + 'vw';
+        emoji.style.animationDuration = (2 + Math.random() * 3) + 's';
+        document.body.appendChild(emoji);
+        setTimeout(() => emoji.remove(), 4000);
+      }
+      const loveText = document.getElementById('loveText');
+      loveText.style.display = 'block';
+      loveText.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>
